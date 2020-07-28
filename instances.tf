@@ -25,12 +25,16 @@ resource "aws_instance" "K8S-Master" {
         source      = "bootstrap.sh"
         destination = "/home/centos/"
   }
+  provisioner "file" {
+        source      = "bootstrap-master.sh"
+        destination = "/home/centos/"
+  }
 
   # bootstrap Master Node.
   provisioner "remote-exec" {
     inline = [
         "chmod +x /home/centos/bootstrap.sh",
-        "/home/centos/bootstrap/bootstrap.sh"
+        "/home/centos/bootstrap.sh"
       ]
   }
 
@@ -38,7 +42,7 @@ resource "aws_instance" "K8S-Master" {
   provisioner "remote-exec" {
     inline = [
         "chmod +x /home/centos/bootstrap-master.sh",
-        "/home/centos/bootstrap/bootstrap-master.sh"
+        "/home/centos/bootstrap-master.sh"
       ]
   }
 }
