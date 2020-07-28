@@ -15,9 +15,9 @@ variable "VPCID" {
 }
 
 variable "K8S_PRIV_KEY" {
-  default = "keys/testkey"
+  default = "testkey"
 }
 
 variable "K8S_PUB_KEY" {
-  default = "keys/testkey.pub"
+  default = "testkey.pub"
 }
