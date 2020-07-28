@@ -23,11 +23,11 @@ resource "aws_instance" "K8S-Master" {
   # Copy sample bootstrap files
   provisioner "file" {
         source      = "bootstrap.sh"
-        destination = "/home/centos/"
+        destination = "/home/centos/bootstrap.sh"
   }
   provisioner "file" {
         source      = "bootstrap-master.sh"
-        destination = "/home/centos/"
+        destination = "/home/centos/bootstrap-master.sh"
   }
 
   # bootstrap Master Node.
