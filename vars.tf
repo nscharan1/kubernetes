@@ -1,5 +1,5 @@
 variable "AWS_REGION" {
-  default = "us-eat-2"
+  default = "us-east-2"
 }
 
 variable "K8S_AMI_ID" {
