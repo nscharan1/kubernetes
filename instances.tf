@@ -17,7 +17,7 @@ resource "aws_instance" "K8S-Master" {
     host        = self.public_ip
     type        = "ssh"
     user        = "centos"
-    private_key = file("keys/k8sLaunchKey")
+    private_key = file("testkey")
   }
 
   # Copy sample bootstrap files
@@ -61,7 +61,7 @@ resource "aws_instance" "K8S-Worker-1" {
     host        = self.public_ip
     type        = "ssh"
     user        = "centos"
-    private_key = file("keys/k8sLaunchKey")
+    private_key = file("testkey")
   }
 
 
@@ -98,7 +98,7 @@ resource "aws_instance" "K8S-Worker-2" {
     host        = self.public_ip
     type        = "ssh"
     user        = "centos"
-    private_key = file("keys/k8sLaunchKey")
+    private_key = file("testkey")
   }
 
   # Copy sample bootstrap files
