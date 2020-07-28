@@ -22,14 +22,14 @@ resource "aws_instance" "K8S-Master" {
 
   # Copy sample bootstrap files
   provisioner "file" {
-        source      = "bootstrap"
+        source      = "bootstrap.sh"
         destination = "/home/centos/"
   }
 
   # bootstrap Master Node.
   provisioner "remote-exec" {
     inline = [
-        "chmod +x /home/centos/bootstrap/bootstrap.sh",
+        "chmod +x /home/centos/bootstrap.sh",
         "/home/centos/bootstrap/bootstrap.sh"
       ]
   }
@@ -37,7 +37,7 @@ resource "aws_instance" "K8S-Master" {
   # Initialise kubernetes cluster.
   provisioner "remote-exec" {
     inline = [
-        "chmod +x /home/centos/bootstrap/bootstrap-master.sh",
+        "chmod +x /home/centos/bootstrap-master.sh",
         "/home/centos/bootstrap/bootstrap-master.sh"
       ]
   }
@@ -67,7 +67,7 @@ resource "aws_instance" "K8S-Worker-1" {
 
   # Copy sample bootstrap files
   provisioner "file" {
-        source      = "bootstrap/bootstrap.sh"
+        source      = "bootstrap.sh"
         destination = "/home/centos/bootstrap.sh"
   }
 
@@ -103,7 +103,7 @@ resource "aws_instance" "K8S-Worker-2" {
 
   # Copy sample bootstrap files
   provisioner "file" {
-        source      = "bootstrap/bootstrap.sh"
+        source      = "bootstrap.sh"
         destination = "/home/centos/bootstrap.sh"
   }
 
