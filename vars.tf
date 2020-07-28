@@ -1,5 +1,5 @@
 variable "AWS_REGION" {
-  default = "ap-south-1"
+  default = "us-eat-2"
 }
 
 variable "K8S_AMI_ID" {
@@ -7,17 +7,17 @@ variable "K8S_AMI_ID" {
 }
 
 variable "SUBNETID" {
-  default = "subnet-588a5131"
+  default = "subnet-9041c8dc"
 }
 
 variable "VPCID" {
-  default = "vpc-2000df49"
+  default = "vpc-68589803"
 }
 
 variable "K8S_PRIV_KEY" {
-  default = "keys/k8sLaunchKey"
+  default = "keys/testkey"
 }
 
 variable "K8S_PUB_KEY" {
-  default = "keys/k8sLaunchKey.pub"
+  default = "keys/testkey.pub"
 }
