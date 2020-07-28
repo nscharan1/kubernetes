@@ -3,7 +3,7 @@ variable "AWS_REGION" {
 }
 
 variable "K8S_AMI_ID" {
-  default = "ami-02e60be79e78fef21"
+  default = "ami-01e36b7901e884a10"
 }
 
 variable "SUBNETID" {
