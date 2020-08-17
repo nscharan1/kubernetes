@@ -1,17 +1,17 @@
 variable "AWS_REGION" {
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "K8S_AMI_ID" {
-  default = "ami-01e36b7901e884a10"
+  default = "ami-0affd4508a5d2481b" 
 }
 
 variable "SUBNETID" {
-  default = "subnet-9041c8dc"
+  default = "subnet-717fee7f"
 }
 
 variable "VPCID" {
-  default = "vpc-68589803"
+  default = "vpc-92e50eef"
 }
 
 variable "K8S_PRIV_KEY" {
