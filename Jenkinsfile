@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sulakshan2503/kubernetes.git'
+                git 'https://github.com/nscharan1/kubernetes.git'
             }
             
         }
