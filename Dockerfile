@@ -1,6 +1,6 @@
 FROM jenkins/jenkins
 
-MAINTAINER sula
+MAINTAINER charan
 
 ADD https://releases.hashicorp.com/terraform/0.12.21/terraform_0.12.21_linux_amd64.zip /opt/
 
